@@ -57,25 +57,36 @@ static CGEventRef mouseEventCallback(CGEventTapProxy proxy, CGEventType type, CG
     //NSLog(@"%lld",flag);
     if( flag == 4)
     {
-        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 123, true);
-        CGEventSetFlags(event,  kCGEventFlagMaskControl);
-        CGEventPost(kCGSessionEventTap, event);
-        CFRelease(event);
-        event = CGEventCreateKeyboardEvent(NULL, 123, false);
-        CGEventSetFlags(event,  kCGEventFlagMaskControl);
-        CGEventPost(kCGSessionEventTap, event);
-        CFRelease(event);
+        
+        NSDictionary *error = [NSDictionary new];
+        //NSAppleScript *script= [[NSAppleScript alloc]initWithSource:@"tell application \"System Events\" \n keystroke \"l\" using control down \n end tell"];
+        NSAppleScript *script= [[NSAppleScript alloc]initWithSource:@"tell application \"System Events\" \n keystroke \"[\" using control down\n end tell"];
+        [script executeAndReturnError:&error];
+        
+//        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 123, true);
+//        CGEventSetFlags(event,  kCGEventFlagMaskControl);
+//        CGEventPost(kCGSessionEventTap, event);
+//        CFRelease(event);
+//        event = CGEventCreateKeyboardEvent(NULL, 123, false);
+//        CGEventSetFlags(event,  kCGEventFlagMaskControl);
+//        CGEventPost(kCGSessionEventTap, event);
+//        CFRelease(event);
     }
     else if (flag == 3)
     {
-        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 124, true);
-        CGEventSetFlags(event,  kCGEventFlagMaskControl);
-        CGEventPost(kCGSessionEventTap, event);
-        CFRelease(event);
-        event = CGEventCreateKeyboardEvent(NULL, 124, false);
-        CGEventSetFlags(event,  kCGEventFlagMaskControl);
-        CGEventPost(kCGSessionEventTap, event);
-        CFRelease(event);
+        
+        NSDictionary *error = [NSDictionary new];
+        NSAppleScript *script= [[NSAppleScript alloc]initWithSource:@"tell application \"System Events\" \n keystroke \"]\" using control down\n end tell"];
+        [script executeAndReturnError:&error];
+        
+//        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 124, true);
+//        CGEventSetFlags(event,  kCGEventFlagMaskControl);
+//        CGEventPost(kCGSessionEventTap, event);
+//        CFRelease(event);
+//        event = CGEventCreateKeyboardEvent(NULL, 124, false);
+//        CGEventSetFlags(event,  kCGEventFlagMaskControl);
+//        CGEventPost(kCGSessionEventTap, event);
+//        CFRelease(event);
     }
     else if (flag == 2)
     {
