@@ -11,6 +11,7 @@
 		E2A0E2A21D61941100464BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A0E2A11D61941100464BA0 /* main.m */; };
 		E2A0E2A41D61941100464BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A0E2A31D61941100464BA0 /* Assets.xcassets */; };
 		E2A0E2A71D61941100464BA0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A0E2A51D61941100464BA0 /* MainMenu.xib */; };
+		E2CD09CD1E78E50500F25EBE /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2CD09CC1E78E50500F25EBE /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E2A0E2A31D61941100464BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2A0E2A61D61941100464BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E2A0E2A81D61941100464BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CD09CC1E78E50500F25EBE /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				E2A0E2A31D61941100464BA0 /* Assets.xcassets */,
 				E2A0E2A51D61941100464BA0 /* MainMenu.xib */,
 				E2A0E2A81D61941100464BA0 /* Info.plist */,
+				E2CD09CC1E78E50500F25EBE /* Config.plist */,
 				E2A0E2A01D61941100464BA0 /* Supporting Files */,
 			);
 			path = Smouse;
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A0E2A41D61941100464BA0 /* Assets.xcassets in Resources */,
+				E2CD09CD1E78E50500F25EBE /* Config.plist in Resources */,
 				E2A0E2A71D61941100464BA0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +287,7 @@
 				E2A0E2AD1D61941100464BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

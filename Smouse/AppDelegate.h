@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate,NSUserNotificationCenterDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate,NSUserNotificationCenterDelegate>{
+    NSDictionary *ConfigPlist;
+    NSString     *DefaultType;
+}
 @property(readwrite, retain) NSStatusItem *statusItem;
 
 @end
