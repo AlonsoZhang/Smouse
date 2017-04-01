@@ -42,11 +42,11 @@
     NSMenu *MainMenu = [[NSMenu alloc]init];
     NSMenuItem *Quit = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@""];
     NSMenuItem *Middle = [[NSMenuItem alloc] initWithTitle:@"默认" action:@selector(middle) keyEquivalent:@""];
-    NSMenuItem *Mission = [[NSMenuItem alloc] initWithTitle:@"多任务" action:@selector(mission) keyEquivalent:@""];
+    //NSMenuItem *Mission = [[NSMenuItem alloc] initWithTitle:@"多任务" action:@selector(mission) keyEquivalent:@""];
     NSMenuItem *Oulu = [[NSMenuItem alloc] initWithTitle:@"欧路词典" action:@selector(oulu) keyEquivalent:@""];
     NSMenuItem *Dic = [[NSMenuItem alloc] initWithTitle:@"本地字典" action:@selector(dic) keyEquivalent:@""];
     [MainMenu addItem:Middle];
-    [MainMenu addItem:Mission];
+    //[MainMenu addItem:Mission];
     [MainMenu addItem:Oulu];
     [MainMenu addItem:Dic];
     [MainMenu addItem:Quit];
@@ -90,11 +90,11 @@ static CGEventRef mouseEventCallback(CGEventTapProxy proxy, CGEventType type, CG
         NSAppleScript *script= [[NSAppleScript alloc]initWithSource:@"tell application \"System Events\" \n keystroke \"[\" using control down\n end tell"];
         [script executeAndReturnError:&error];*/
         
-        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 123, true);
+        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 43, true);
         CGEventSetFlags(event,  kCGEventFlagMaskControl);
         CGEventPost(kCGSessionEventTap, event);
         CFRelease(event);
-        event = CGEventCreateKeyboardEvent(NULL, 123, false);
+        event = CGEventCreateKeyboardEvent(NULL, 43, false);
         CGEventSetFlags(event,  kCGEventFlagMaskControl);
         CGEventPost(kCGSessionEventTap, event);
         CFRelease(event);
@@ -106,11 +106,11 @@ static CGEventRef mouseEventCallback(CGEventTapProxy proxy, CGEventType type, CG
         NSAppleScript *script= [[NSAppleScript alloc]initWithSource:@"tell application \"System Events\" \n keystroke \"]\" using control down\n end tell"];
         [script executeAndReturnError:&error];*/
         
-        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 124, true);
+        CGEventRef event = CGEventCreateKeyboardEvent(NULL, 47, true);
         CGEventSetFlags(event,  kCGEventFlagMaskControl);
         CGEventPost(kCGSessionEventTap, event);
         CFRelease(event);
-        event = CGEventCreateKeyboardEvent(NULL, 124, false);
+        event = CGEventCreateKeyboardEvent(NULL, 47, false);
         CGEventSetFlags(event,  kCGEventFlagMaskControl);
         CGEventPost(kCGSessionEventTap, event);
         CFRelease(event);
@@ -118,7 +118,9 @@ static CGEventRef mouseEventCallback(CGEventTapProxy proxy, CGEventType type, CG
     else if (flag == 2)
     {
         NSString *midbtn = [[[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"Config" ofType:@"plist"]]objectForKey:@"DefaultType"];
-
+        if ([midbtn isEqualToString:@"middle"]) {
+            return mevent;
+        }
         if ([midbtn isEqualToString:@"oulu"]) {
             CGEventRef event = CGEventCreateKeyboardEvent(NULL,  7, true);
             CGEventSetFlags(event,  kCGEventFlagMaskAlternate);
