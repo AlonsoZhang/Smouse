@@ -27,6 +27,7 @@
     CFRelease(runLoopSource);
     
     [self StatusBarItem];
+    //MyMouse = [[Mouse alloc]init];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

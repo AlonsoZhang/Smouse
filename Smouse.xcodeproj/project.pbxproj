@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20459CD20C67BE000998EAC /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = E20459CC20C67BE000998EAC /* Mouse.m */; };
 		E2A0E29F1D61941100464BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A0E29E1D61941100464BA0 /* AppDelegate.m */; };
 		E2A0E2A21D61941100464BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A0E2A11D61941100464BA0 /* main.m */; };
 		E2A0E2A41D61941100464BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A0E2A31D61941100464BA0 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20459CB20C67BE000998EAC /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mouse.h; sourceTree = "<group>"; };
+		E20459CC20C67BE000998EAC /* Mouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mouse.m; sourceTree = "<group>"; };
 		E2A0E29A1D61941100464BA0 /* Smouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A0E29D1D61941100464BA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2A0E29E1D61941100464BA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +60,8 @@
 			children = (
 				E2A0E29D1D61941100464BA0 /* AppDelegate.h */,
 				E2A0E29E1D61941100464BA0 /* AppDelegate.m */,
+				E20459CB20C67BE000998EAC /* Mouse.h */,
+				E20459CC20C67BE000998EAC /* Mouse.m */,
 				E2A0E2A31D61941100464BA0 /* Assets.xcassets */,
 				E2A0E2A51D61941100464BA0 /* MainMenu.xib */,
 				E2A0E2A81D61941100464BA0 /* Info.plist */,
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20459CD20C67BE000998EAC /* Mouse.m in Sources */,
 				E2A0E2A21D61941100464BA0 /* main.m in Sources */,
 				E2A0E29F1D61941100464BA0 /* AppDelegate.m in Sources */,
 			);
